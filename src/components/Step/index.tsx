@@ -113,11 +113,13 @@ export const Step = forwardRef<StepProps, 'div'>(
 
     const isVertical = orientation === 'vertical';
 
+    const checkColor = useColorModeValue('white', 'gray.800');
+
     const renderIcon = () => {
       if (isCompletedStep) {
         return (
           <MotionFlex key="check-icon" {...animationConfig}>
-            <Check color="white" style={icon} />
+            <Check color={checkColor} style={icon} />
           </MotionFlex>
         );
       }
