@@ -78,7 +78,7 @@ export const Step = forwardRef<StepProps, 'div'>(
 
     const { step, stepIconCont, label, description, icon } = useStyles();
 
-    const activeBg = `${c}.500`;
+    const activeBg = useColorModeValue(`${c}.500`, `${c}.200`);
 
     const inactiveBg = useColorModeValue(`gray.200`, `gray.700`);
 
